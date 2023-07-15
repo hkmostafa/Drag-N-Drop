@@ -36,3 +36,7 @@ The application consists of the following components:
 - Framework: Input field for entering a framework.
 - StrictModeDroppable: Custom droppable component for handling the drag and drop functionality.
 - ArrayList: Component that displays the selected items in a table.
+
+## Deployed on Vercel
+
+https://drag-n-drop-iota.vercel.app/
