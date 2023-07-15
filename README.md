@@ -1,6 +1,6 @@
 # Drag 'N' Drop
 
-This is a React application that demonstrates drag and drop functionality between two drop zones.
+React application with drag and drop functionality between two drop zones.
 
 ## Getting Started
 
