@@ -1,4 +1,4 @@
-import { useContext, useState,useEffect } from "react";
+import { useContext, useState } from "react";
 import { StateContext } from "../context";
 import isDivInsideRightZone from "../utility/rightDevParent";
 
@@ -30,9 +30,6 @@ const ArrayList = () => {
     setData({ email, name, framework, technology, workStyle });
   };
 
-  useEffect(()=>{
-    showData()
-  },[isEmailInside,isNameInside,isFrameworkInside,isWorkStyleInside,istechnologyInside])
   return (
     <>
       <button
@@ -67,19 +64,19 @@ const ArrayList = () => {
             <tr className="font-PoppinsRegular text-xs sm:text-sm text-center sm:text-left   text-gray-300">
               <td className="py-2 px-1 md:px-4 border-r-[0.5px]  sm:border-none border-solid  break-words">
                 {/*Show name only if the name input is in the right dropzone */}
-                {isNameInside && name}
+                {isNameInside && data.name}
               </td>
               <td className="py-2  px-1 md:px-4 border-r-[0.5px]  sm:border-none border-solid break-words">
-                {isWorkStyleInside && workStyle}
+                {isWorkStyleInside && data.workStyle}
               </td>
               <td className="py-2  px-1 md:px-4 border-r-[0.5px]  sm:border-none border-solid  break-words">
-                {isEmailInside && email}
+                {isEmailInside && data.email}
               </td>
               <td className="py-2 px-1 md:px-4 border-r-[0.5px]  sm:border-none border-solid break-words">
-                {isFrameworkInside && framework}
+                {isFrameworkInside && data.framework}
               </td>
               <td className="py-2  px-1 md:px-4 border-solid sm:border-none  break-words ">
-                {istechnologyInside && technology}
+                {istechnologyInside && data.technology}
               </td>
             </tr>
           </tbody>
